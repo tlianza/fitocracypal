@@ -6,6 +6,9 @@ import (
 	"github.com/jmoiron/sqlx"
 	"net/http"
 	"flag"
+	"encoding/csv"
+	"os"
+	"strconv"
 )
 
 
@@ -24,14 +27,58 @@ func main() {
 		log.Fatal("Required arguments not provided")
 	}
 
+	//TODO: split these into different operations that can be triggered with different flags
+
+	//Fill the sqlite db with data from the API
 	PopulateDB(db, *username, *password)
-	DumpCSV(db, *file)
+
+	//Dump the DB data into a csv
+	err = DumpCSV(db, *username, *file)
+	if err != nil {
+		log.Fatal("error generating csv: ", err)
+	}
 }
 
 // Dump the contents of an already populated db into a csv
-func DumpCSV(db *sqlx.DB, filename string) (err error) {
+func DumpCSV(db *sqlx.DB, username string, filename string) (err error) {
+
+	err, user := GetUserByUsername(db, username)
+	if nil != err {
+		log.Fatal(err)
+	}
+
+	file, err := os.OpenFile(filename, os.O_CREATE|os.O_WRONLY, 0777)
+	defer file.Close()
+	if err != nil {
+		os.Exit(1)
+	}
+
+	rows, err := db.Queryx("SELECT * FROM user_activities JOIN activities ON user_activities.activity_id=activities.id WHERE user_id=$1", user.Id)
+	if nil != err {
+		log.Fatal(err)
+	}
+
+	csvWriter := csv.NewWriter(file)
+
+	for rows.Next() {
+		userActivityDetail := UserActivityDetail{}
+		err := rows.StructScan(&userActivityDetail)
+		if err != nil {
+			return err
+		}
+		if err := csvWriter.Write([]string{userActivityDetail.PerformedAt.String(), strconv.Itoa(userActivityDetail.Activity.Id), userActivityDetail.Name, strconv.FormatFloat(userActivityDetail.Weight,'f', -1, 32), strconv.FormatFloat(userActivityDetail.Reps,'f', -1, 32)}); err != nil {
+			log.Fatalln("error writing record to csv:", err)
+		}
+
+	}
+
+	// Write any buffered data to the underlying writer
+	csvWriter.Flush()
+	log.Printf("Wrote csv output to %s\n", filename)
+
 	return
 }
+
 
 // Does all the heavy lifting of populating the local db with everything from Fitocracy
 func PopulateDB(db *sqlx.DB, username string, password string){
@@ -41,10 +88,8 @@ func PopulateDB(db *sqlx.DB, username string, password string){
 	if nil != err {
 		log.Fatal(err)
 	}
-
-	user := User{}
 	log.Printf("Looking up user %s (%d)\n", username, fitocracyUserId)
-	err = db.Get(&user, "SELECT * FROM users WHERE fitocracy_id=$1", fitocracyUserId)
+	err, user := GetUserByFitocracyId(db, fitocracyUserId)
 	if nil != err {
 		log.Println(err)
 		user.FitocracyId = fitocracyUserId

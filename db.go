@@ -20,10 +20,27 @@ type Activity struct {
 }
 
 type UserActivityCount struct {
-	UserId      int       `db:"user_id"`
-	ActivityId  int       `db:"activity_id"`
-	Count       int       `db:"count"`
-	CreatedAt   time.Time `db:"created_at"`
+	UserId     int       `db:"user_id"`
+	ActivityId int       `db:"activity_id"`
+	Count      int       `db:"count"`
+	CreatedAt  time.Time `db:"created_at"`
+}
+
+type UserActivity struct {
+	Id               int       `db:"id"`
+	UserId           int       `db:"user_id"`
+	ActivityId       int       `db:"activity_id"`
+	FitocracyGroupId int       `db:"fitocracy_group_id"`
+	Units            string    `db:"units"`
+	Reps             float64   `db:"reps"`
+	Weight           float64   `db:"weight"`
+	PerformedAt      time.Time `db:"performed_at"`
+	CreatedAt        time.Time `db:"created_at"`
+}
+
+type UserActivityDetail struct {
+	*UserActivity
+	*Activity
 }
 
 var schema = `
@@ -66,4 +83,14 @@ func getDB() (db *sqlx.DB, err error) {
 
 func ensureSchema(db *sqlx.DB) {
 	db.MustExec(schema)
+}
+
+func GetUserByFitocracyId(db *sqlx.DB, fitocracyUserId int) (err error, user User) {
+	err = db.Get(&user, "SELECT * FROM users WHERE fitocracy_id=$1", fitocracyUserId)
+	return
+}
+
+func GetUserByUsername(db *sqlx.DB, fitocracyUsername string) (err error, user User) {
+	err = db.Get(&user, "SELECT * FROM users WHERE fitocracy_username=$1", fitocracyUsername)
+	return
 }
