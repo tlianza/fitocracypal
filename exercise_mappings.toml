@@ -1,0 +1,652 @@
+
+[[exercises]]
+fitocracy_name = "Barbell Bench Press"
+fitocracy_id = 1
+mfp_name = "Bench Press, Barbell"
+mfp_id = 219
+virtuagym_id=314
+virtuagym_name="Bench press - Barbell"
+
+[[exercises]]
+fitocracy_name = "Barbell Squat"
+fitocracy_id = 2
+mfp_name = "Squat"
+mfp_id = 289
+virtuagym_id=354
+virtuagym_name="Squat - Barbell"
+
+[[exercises]]
+fitocracy_name = "Barbell Deadlift"
+fitocracy_id = 3
+mfp_name = "Deadlift, Straight Leg"
+mfp_id = 231
+virtuagym_id=355
+virtuagym_name="Deadlift - Barbell"
+
+[[exercises]]
+fitocracy_name='Machine Ab Crunch'
+fitocracy_id=5
+virtuagym_id=231
+virtuagym_name="Abdominal crunch machine"
+
+[[exercises]]
+fitocracy_name = "Crunch"
+fitocracy_id = 11
+mfp_name = "Abdominal Crunches"
+mfp_id = 211
+virtuagym_id=177
+virtuagym_name="Crunch"
+
+[[exercises]]
+fitocracy_name = "Barbell Curl"
+fitocracy_id = 34
+mfp_name = "Standing Medium-Grip Barbell Curl"
+mfp_id = 293
+virtuagym_id=363
+virtuagym_name="Biceps curl standing - Barbell"
+
+[[exercises]]
+fitocracy_name = "Barbell Incline Bench Press"
+fitocracy_id = 84
+mfp_name = "Incline Bench Press"
+mfp_id = 251
+virtuagym_id=362
+virtuagym_name="Bench press inclined - Barbell"
+
+[[exercises]]
+fitocracy_name = "Decline Barbell Bench Press"
+fitocracy_id = 88
+mfp_name = "Decline Bench Press"
+mfp_id = 232
+virtuagym_id=6071
+virtuagym_name="Bench press decline wide grip - Barbell"
+
+[[exercises]]
+fitocracy_name = "Barbell Shrug"
+fitocracy_id = 231
+mfp_name = "Shoulder Shrug"
+mfp_id = 285
+virtuagym_id=1962
+virtuagym_name="Shrugs standing - Barbell"
+
+[[exercises]]
+fitocracy_name = "Seated Barbell Military Press"
+fitocracy_id = 491
+mfp_name = "Barbell Military Press"
+mfp_id = 217
+virtuagym_id=315
+virtuagym_name="Shoulder press seated - Barbell"
+
+[[exercises]]
+fitocracy_name = "Lat Pulldown"
+fitocracy_id = 286
+mfp_name = "Lat Pulldown"
+mfp_id = 257
+virtuagym_id=184
+virtuagym_name="Lat pulldown wide grip front"
+
+[[exercises]]
+fitocracy_name = "Machine Back Extension"
+fitocracy_id = 935
+mfp_name = "Back Extension"
+mfp_id = 215
+virtuagym_id=234
+virtuagym_name="Back extension machine"
+
+[[exercises]]
+fitocracy_name = "Dumbbell Flyes"
+fitocracy_id = 93
+mfp_name = "Flat Dumbbell Fly"
+mfp_id = 239
+virtuagym_id=204
+virtuagym_name="Butterfly - DBs"
+
+[[exercises]]
+fitocracy_name = "Dumbbell Bicep Curl"
+fitocracy_id = 42
+mfp_name = "Standing Biceps Curl, Dumbell"
+mfp_id = 291
+virtuagym_id=182
+virtuagym_name="Biceps curl standing, alternated - DBs"
+
+[[exercises]]
+fitocracy_name = "Basketball"
+fitocracy_id = 331
+mfp_name = "Basketball, nongame, general"
+mfp_id = 12
+mfp_type = "cardio"
+virtuagym_id=31
+virtuagym_name="Basketball - recreational"
+
+[[exercises]]
+fitocracy_name = "Bikram / Hot Yoga"
+fitocracy_id = 506
+mfp_name = "Yoga"
+mfp_id = 421029
+mfp_type = "cardio"
+virtuagym_id=516
+virtuagym_name="Bikram Yoga"
+
+[[exercises]]
+fitocracy_name='Decline Crunch'
+fitocracy_id=12
+
+[[exercises]]
+fitocracy_name='Dumbbell Side Bend'
+fitocracy_id=15
+
+[[exercises]]
+fitocracy_name='Exercise Ball Crunch'
+fitocracy_id=16
+
+[[exercises]]
+fitocracy_name='Flat Straight Leg Raise'
+fitocracy_id=18
+
+[[exercises]]
+fitocracy_name='Hanging Straight Leg Raise'
+fitocracy_id=19
+
+[[exercises]]
+fitocracy_name='Oblique Crunch'
+fitocracy_id=22
+
+[[exercises]]
+fitocracy_name='Barbell Curl'
+fitocracy_id=34
+
+[[exercises]]
+fitocracy_name='Concentration Curls'
+fitocracy_id=40
+
+[[exercises]]
+fitocracy_name='Dumbbell Bicep Curl'
+fitocracy_id=42
+
+[[exercises]]
+fitocracy_name='Hammer Dumbbell Curl'
+fitocracy_id=45
+
+[[exercises]]
+fitocracy_name='High Cable Curls'
+fitocracy_id=46
+
+[[exercises]]
+fitocracy_name='Incline Dumbbell Curl'
+fitocracy_id=47
+
+[[exercises]]
+fitocracy_name='Machine Preacher Curls'
+fitocracy_id=51
+
+[[exercises]]
+fitocracy_name='Preacher Curl'
+fitocracy_id=54
+
+[[exercises]]
+fitocracy_name='Reverse Barbell Curl'
+fitocracy_id=56
+
+[[exercises]]
+fitocracy_name='Reverse Cable Curl'
+fitocracy_id=58
+
+[[exercises]]
+fitocracy_name='Seated Dumbbell Curl'
+fitocracy_id=60
+
+[[exercises]]
+fitocracy_name='Spider Curl'
+fitocracy_id=62
+
+[[exercises]]
+fitocracy_name='Standing Biceps Cable Curl'
+fitocracy_id=63
+
+[[exercises]]
+fitocracy_name='Standing Dumbbell Reverse Curl'
+fitocracy_id=64
+
+[[exercises]]
+fitocracy_name='Wide-Grip Standing Barbell Curl'
+fitocracy_id=69
+
+[[exercises]]
+fitocracy_name='Seated Calf Raise'
+fitocracy_id=77
+
+[[exercises]]
+fitocracy_name='Standing Calf Raise'
+fitocracy_id=80
+
+[[exercises]]
+fitocracy_name='Barbell Incline Bench Press'
+fitocracy_id=84
+
+[[exercises]]
+fitocracy_name='Bent-Arm Dumbbell Pullover'
+fitocracy_id=86
+
+[[exercises]]
+fitocracy_name='Cable Crossover'
+fitocracy_id=87
+
+[[exercises]]
+fitocracy_name='Decline Barbell Bench Press'
+fitocracy_id=88
+
+[[exercises]]
+fitocracy_name='Decline Dumbbell Bench Press'
+fitocracy_id=89
+
+[[exercises]]
+fitocracy_name='Dumbbell Bench Press'
+fitocracy_id=92
+
+[[exercises]]
+fitocracy_name='Dumbbell Flyes'
+fitocracy_id=93
+
+[[exercises]]
+fitocracy_name='Flat Bench Cable Flyes'
+fitocracy_id=95
+
+[[exercises]]
+fitocracy_name='Incline Cable Flyes'
+fitocracy_id=98
+
+[[exercises]]
+fitocracy_name='Incline Dumbbell Flyes'
+fitocracy_id=99
+
+[[exercises]]
+fitocracy_name='Machine Bench Press'
+fitocracy_id=103
+
+[[exercises]]
+fitocracy_name='Push-Up'
+fitocracy_id=107
+
+[[exercises]]
+fitocracy_name='Smith Machine Bench Press'
+fitocracy_id=110
+
+[[exercises]]
+fitocracy_name='Smith Machine Incline Bench Press'
+fitocracy_id=111
+
+[[exercises]]
+fitocracy_name='Seated Leg Curl'
+fitocracy_id=143
+
+[[exercises]]
+fitocracy_name='Bent Over Barbell Row'
+fitocracy_id=153
+
+[[exercises]]
+fitocracy_name='T-Bar Row'
+fitocracy_id=160
+
+[[exercises]]
+fitocracy_name='One-Arm Dumbbell Row'
+fitocracy_id=164
+
+[[exercises]]
+fitocracy_name='Seated Cable Row'
+fitocracy_id=166
+
+[[exercises]]
+fitocracy_name='Leg Extensions'
+fitocracy_id=176
+
+[[exercises]]
+fitocracy_name='Leg Press'
+fitocracy_id=177
+
+[[exercises]]
+fitocracy_name='Standing Barbell Shoulder Press (OHP)'
+fitocracy_id=183
+
+[[exercises]]
+fitocracy_name='Cable Rope Rear-Delt Rows'
+fitocracy_id=187
+
+[[exercises]]
+fitocracy_name='Seated Dumbbell Side Lateral Raise'
+fitocracy_id=195
+
+[[exercises]]
+fitocracy_name='Standing Dumbbell Shoulder Press'
+fitocracy_id=196
+
+[[exercises]]
+fitocracy_name='Front Dumbbell Raise'
+fitocracy_id=198
+
+[[exercises]]
+fitocracy_name='Machine Shoulder (Military) Press'
+fitocracy_id=207
+
+[[exercises]]
+fitocracy_name='Seated Barbell Shoulder Press'
+fitocracy_id=213
+
+[[exercises]]
+fitocracy_name='Seated Dumbbell Shoulder Press'
+fitocracy_id=215
+
+[[exercises]]
+fitocracy_name='Upright Barbell Row'
+fitocracy_id=230
+
+[[exercises]]
+fitocracy_name='Barbell Shrug'
+fitocracy_id=231
+
+[[exercises]]
+fitocracy_name='Calf-Machine Shoulder Shrug'
+fitocracy_id=234
+
+[[exercises]]
+fitocracy_name='Dumbbell Shrug'
+fitocracy_id=235
+
+[[exercises]]
+fitocracy_name='Close-Grip Barbell Bench Press'
+fitocracy_id=246
+
+[[exercises]]
+fitocracy_name='Dips - Triceps Version'
+fitocracy_id=251
+
+[[exercises]]
+fitocracy_name='Dumbbell One-Arm Triceps Extension'
+fitocracy_id=252
+
+[[exercises]]
+fitocracy_name='Lying Triceps Press'
+fitocracy_id=259
+
+[[exercises]]
+fitocracy_name='Smith Machine Close-Grip Bench Press'
+fitocracy_id=269
+
+[[exercises]]
+fitocracy_name='Standing Dumbbell Triceps Extension'
+fitocracy_id=272
+
+[[exercises]]
+fitocracy_name='Standing One-Arm Dumbbell Triceps Extension'
+fitocracy_id=274
+
+[[exercises]]
+fitocracy_name='Standing Overhead Barbell Triceps Extension'
+fitocracy_id=275
+
+[[exercises]]
+fitocracy_name='Tricep Dumbbell Kickback'
+fitocracy_id=276
+
+[[exercises]]
+fitocracy_name='Triceps Pushdown'
+fitocracy_id=277
+
+[[exercises]]
+fitocracy_name='Triceps Pushdown - Rope Attachment'
+fitocracy_id=278
+
+[[exercises]]
+fitocracy_name='Chin-Up'
+fitocracy_id=283
+
+[[exercises]]
+fitocracy_name='Close-Grip Front Lat Pulldown'
+fitocracy_id=284
+
+[[exercises]]
+fitocracy_name='Lat Pulldown'
+fitocracy_id=286
+
+[[exercises]]
+fitocracy_name='Pull-Up'
+fitocracy_id=288
+
+[[exercises]]
+fitocracy_name='Wide-Grip Lat Pulldown'
+fitocracy_id=295
+
+[[exercises]]
+fitocracy_name='Running (treadmill)'
+fitocracy_id=300
+
+[[exercises]]
+fitocracy_name='Incline Dumbbell Bench Press'
+fitocracy_id=303
+
+[[exercises]]
+fitocracy_name='Elliptical Trainer'
+fitocracy_id=304
+
+[[exercises]]
+fitocracy_name='Cycling (stationary)'
+fitocracy_id=305
+
+[[exercises]]
+fitocracy_name='Stair Machine'
+fitocracy_id=306
+
+[[exercises]]
+fitocracy_name='Lying Barbell Triceps Extension'
+fitocracy_id=314
+
+[[exercises]]
+fitocracy_name='Russian Twist'
+fitocracy_id=317
+
+[[exercises]]
+fitocracy_name='Basketball'
+fitocracy_id=331
+
+[[exercises]]
+fitocracy_name='Sit-Up'
+fitocracy_id=349
+
+[[exercises]]
+fitocracy_name='Body Weight Squat'
+fitocracy_id=350
+
+[[exercises]]
+fitocracy_name='Ab Wheel (kneeling)'
+fitocracy_id=396
+
+[[exercises]]
+fitocracy_name='Weighted Hanging Leg Raise'
+fitocracy_id=398
+
+[[exercises]]
+fitocracy_name='Bicycle'
+fitocracy_id=408
+
+[[exercises]]
+fitocracy_name='Romanian Deadlift'
+fitocracy_id=425
+
+[[exercises]]
+fitocracy_name='Wide-Grip Pull-Up'
+fitocracy_id=437
+
+[[exercises]]
+fitocracy_name='Parallel-Grip Pull-Up'
+fitocracy_id=438
+
+[[exercises]]
+fitocracy_name='Body Weight Ring Row'
+fitocracy_id=462
+
+[[exercises]]
+fitocracy_name='Power Clean'
+fitocracy_id=472
+
+[[exercises]]
+fitocracy_name='Barbell Split Squat'
+fitocracy_id=476
+
+[[exercises]]
+fitocracy_name='Dumbbell Side Lateral Raise'
+fitocracy_id=490
+
+[[exercises]]
+fitocracy_name='Seated Barbell Military Press'
+fitocracy_id=491
+
+[[exercises]]
+fitocracy_name='Bikram / Hot Yoga'
+fitocracy_id=506
+
+[[exercises]]
+fitocracy_name='Running'
+fitocracy_id=518
+
+[[exercises]]
+fitocracy_name='Machine Chest Fly (Pec Deck)'
+fitocracy_id=522
+
+[[exercises]]
+fitocracy_name='Bent-Over Rear Delt Raise'
+fitocracy_id=523
+
+[[exercises]]
+fitocracy_name='Walking'
+fitocracy_id=525
+
+[[exercises]]
+fitocracy_name='Hiking'
+fitocracy_id=529
+
+[[exercises]]
+fitocracy_name='Walking (treadmill)'
+fitocracy_id=530
+
+[[exercises]]
+fitocracy_name='Pendlay Row'
+fitocracy_id=532
+
+[[exercises]]
+fitocracy_name='Scissors with Hold (Beach Scissors)'
+fitocracy_id=549
+
+[[exercises]]
+fitocracy_name='Wide Leg Sit-Up'
+fitocracy_id=554
+
+[[exercises]]
+fitocracy_name='Vertical Leg Crunch'
+fitocracy_id=556
+
+[[exercises]]
+fitocracy_name='Leg Climb Crunch'
+fitocracy_id=557
+
+[[exercises]]
+fitocracy_name='Pulse Up - Legs Straight'
+fitocracy_id=558
+
+[[exercises]]
+fitocracy_name='Other Cardio'
+fitocracy_id=587
+
+[[exercises]]
+fitocracy_name='Flat Frog Raise'
+fitocracy_id=649
+
+[[exercises]]
+fitocracy_name='Flat Bent Leg Raise'
+fitocracy_id=650
+
+[[exercises]]
+fitocracy_name='Moving boxes'
+fitocracy_id=686
+
+[[exercises]]
+fitocracy_name='General Yoga'
+fitocracy_id=689
+
+[[exercises]]
+fitocracy_name='V-Squat Machine'
+fitocracy_id=708
+
+[[exercises]]
+fitocracy_name='V-Up'
+fitocracy_id=717
+
+[[exercises]]
+fitocracy_name='Machine Incline Bench Press'
+fitocracy_id=718
+
+[[exercises]]
+fitocracy_name='Hang Clean'
+fitocracy_id=736
+
+[[exercises]]
+fitocracy_name='Oblique V-Ups'
+fitocracy_id=746
+
+[[exercises]]
+fitocracy_name='Dip Station Straight Leg Raise'
+fitocracy_id=748
+
+[[exercises]]
+fitocracy_name='Weighted Reverse Crunch'
+fitocracy_id=836
+
+[[exercises]]
+fitocracy_name='Cable External Rotation'
+fitocracy_id=867
+
+[[exercises]]
+fitocracy_name='Machine Hack Squat'
+fitocracy_id=868
+
+[[exercises]]
+fitocracy_name='Machine Bicep Curls'
+fitocracy_id=933
+
+[[exercises]]
+fitocracy_name='Machine Calf Extension'
+fitocracy_id=934
+
+[[exercises]]
+fitocracy_name='Machine Back Extension'
+fitocracy_id=935
+
+[[exercises]]
+fitocracy_name='Kettlebell Deadlift'
+fitocracy_id=960
+
+[[exercises]]
+fitocracy_name='Stability Ball Push-Up'
+fitocracy_id=961
+
+[[exercises]]
+fitocracy_name='Rack Squat'
+fitocracy_id=973
+
+[[exercises]]
+fitocracy_name='Machine Seated Row'
+fitocracy_id=984
+
+[[exercises]]
+fitocracy_name='Machine Chest Press'
+fitocracy_id=1007
+
+[[exercises]]
+fitocracy_name='Weighted Russian Twist'
+fitocracy_id=1015
+
+[[exercises]]
+fitocracy_name='Rotary Torso Machine'
+fitocracy_id=1088
+
+[[exercises]]
+fitocracy_name='Band Chest Press'
+fitocracy_id=1181
