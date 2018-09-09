@@ -1,5 +1,7 @@
 package main
 
+import "github.com/cloudflare/cfssl/log"
+
 type Exercise struct {
 	FitocracyName string `toml:"fitocracy_name"`
 	FitocracyId   int    `toml:"fitocracy_id"`
@@ -28,6 +30,8 @@ func NewExerciseMapper(exercises []Exercise) *ExerciseMapper {
 		mapper.ByFitocracyId[e.FitocracyId] = e
 		if e.VirtuaGymId > 0 {
 			mapper.ByVirtuaGymId[e.VirtuaGymId] = e
+		} else {
+			log.Warningf("No virtuagym mapping for %d - %s", e.FitocracyId, e)
 		}
 	}
 

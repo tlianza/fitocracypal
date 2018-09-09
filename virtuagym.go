@@ -12,7 +12,7 @@ func (c VirtuaGymCSVDumper) Dump (csvWriter *csv.Writer, userActivityDetail User
 	e := exerciseMapper.ByFitocracyId[userActivityDetail.Activity.Id]
 
 	if e.VirtuaGymId <= 0 {
-		log.Printf("Unknown virtuagym exercise: %d, %s\n", userActivityDetail.Activity.Id, userActivityDetail.Name)
+		//log.Printf("Unknown virtuagym exercise: %d, %s\n", userActivityDetail.Activity.Id, userActivityDetail.Name)
 		return //can't add to csv
 	}
 

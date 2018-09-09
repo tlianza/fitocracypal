@@ -38,6 +38,42 @@ virtuagym_id=177
 virtuagym_name="Crunch"
 
 [[exercises]]
+fitocracy_name='Decline Crunch'
+fitocracy_id=12
+virtuagym_id=6074
+virtuagym_name="Crunch decline - Bench"
+
+[[exercises]]
+fitocracy_name='Dumbbell Side Bend'
+fitocracy_id=15
+virtuagym_id=399
+virtuagym_name="Side bend, right - DB"
+
+[[exercises]]
+fitocracy_name='Exercise Ball Crunch'
+fitocracy_id=16
+virtuagym_id=49
+virtuagym_name="Crunch - FB"
+
+[[exercises]]
+fitocracy_name='Flat Straight Leg Raise'
+fitocracy_id=18
+virtuagym_id=400
+virtuagym_name="Lying leg raise - DB"
+
+[[exercises]]
+fitocracy_name='Hanging Straight Leg Raise'
+fitocracy_id=19
+virtuagym_id=57238
+virtuagym_name="Hanging leg raise - Rig"
+
+[[exercises]]
+fitocracy_name='Oblique Crunch'
+fitocracy_id=22
+virtuagym_id=259
+virtuagym_name="Oblique crunch"
+
+[[exercises]]
 fitocracy_name = "Barbell Curl"
 fitocracy_id = 34
 mfp_name = "Standing Medium-Grip Barbell Curl"
@@ -46,60 +82,10 @@ virtuagym_id=363
 virtuagym_name="Biceps curl standing - Barbell"
 
 [[exercises]]
-fitocracy_name = "Barbell Incline Bench Press"
-fitocracy_id = 84
-mfp_name = "Incline Bench Press"
-mfp_id = 251
-virtuagym_id=362
-virtuagym_name="Bench press inclined - Barbell"
-
-[[exercises]]
-fitocracy_name = "Decline Barbell Bench Press"
-fitocracy_id = 88
-mfp_name = "Decline Bench Press"
-mfp_id = 232
-virtuagym_id=6071
-virtuagym_name="Bench press decline wide grip - Barbell"
-
-[[exercises]]
-fitocracy_name = "Barbell Shrug"
-fitocracy_id = 231
-mfp_name = "Shoulder Shrug"
-mfp_id = 285
-virtuagym_id=1962
-virtuagym_name="Shrugs standing - Barbell"
-
-[[exercises]]
-fitocracy_name = "Seated Barbell Military Press"
-fitocracy_id = 491
-mfp_name = "Barbell Military Press"
-mfp_id = 217
-virtuagym_id=315
-virtuagym_name="Shoulder press seated - Barbell"
-
-[[exercises]]
-fitocracy_name = "Lat Pulldown"
-fitocracy_id = 286
-mfp_name = "Lat Pulldown"
-mfp_id = 257
-virtuagym_id=184
-virtuagym_name="Lat pulldown wide grip front"
-
-[[exercises]]
-fitocracy_name = "Machine Back Extension"
-fitocracy_id = 935
-mfp_name = "Back Extension"
-mfp_id = 215
-virtuagym_id=234
-virtuagym_name="Back extension machine"
-
-[[exercises]]
-fitocracy_name = "Dumbbell Flyes"
-fitocracy_id = 93
-mfp_name = "Flat Dumbbell Fly"
-mfp_id = 239
-virtuagym_id=204
-virtuagym_name="Butterfly - DBs"
+fitocracy_name='Concentration Curls'
+fitocracy_id=40
+virtuagym_id=209
+virtuagym_name="Concentration curl, right - DB"
 
 [[exercises]]
 fitocracy_name = "Dumbbell Bicep Curl"
@@ -110,62 +96,10 @@ virtuagym_id=182
 virtuagym_name="Biceps curl standing, alternated - DBs"
 
 [[exercises]]
-fitocracy_name = "Basketball"
-fitocracy_id = 331
-mfp_name = "Basketball, nongame, general"
-mfp_id = 12
-mfp_type = "cardio"
-virtuagym_id=31
-virtuagym_name="Basketball - recreational"
-
-[[exercises]]
-fitocracy_name = "Bikram / Hot Yoga"
-fitocracy_id = 506
-mfp_name = "Yoga"
-mfp_id = 421029
-mfp_type = "cardio"
-virtuagym_id=516
-virtuagym_name="Bikram Yoga"
-
-[[exercises]]
-fitocracy_name='Decline Crunch'
-fitocracy_id=12
-
-[[exercises]]
-fitocracy_name='Dumbbell Side Bend'
-fitocracy_id=15
-
-[[exercises]]
-fitocracy_name='Exercise Ball Crunch'
-fitocracy_id=16
-
-[[exercises]]
-fitocracy_name='Flat Straight Leg Raise'
-fitocracy_id=18
-
-[[exercises]]
-fitocracy_name='Hanging Straight Leg Raise'
-fitocracy_id=19
-
-[[exercises]]
-fitocracy_name='Oblique Crunch'
-fitocracy_id=22
-
-[[exercises]]
-fitocracy_name='Barbell Curl'
-fitocracy_id=34
-
-[[exercises]]
-fitocracy_name='Concentration Curls'
-fitocracy_id=40
-
-[[exercises]]
-fitocracy_name='Dumbbell Bicep Curl'
-fitocracy_id=42
-
-[[exercises]]
 fitocracy_name='Hammer Dumbbell Curl'
 fitocracy_id=45
+virtuagym_id=423
+virtuagym_name="Hammer Curl, alternated - DBs"
 
 [[exercises]]
 fitocracy_name='High Cable Curls'
@@ -174,18 +108,26 @@ fitocracy_id=46
 [[exercises]]
 fitocracy_name='Incline Dumbbell Curl'
 fitocracy_id=47
+virtuagym_id=5876
+virtuagym_name="Biceps curl incline  - DBs"
 
 [[exercises]]
 fitocracy_name='Machine Preacher Curls'
 fitocracy_id=51
+virtuagym_id=237
+virtuagym_name="Preacher curl machine"
 
 [[exercises]]
 fitocracy_name='Preacher Curl'
 fitocracy_id=54
+virtuagym_id=5903
+virtuagym_name="Preacher curl - Barbell"
 
 [[exercises]]
 fitocracy_name='Reverse Barbell Curl'
 fitocracy_id=56
+virtuagym_id=368
+virtuagym_name="Reverse curl - Barbell"
 
 [[exercises]]
 fitocracy_name='Reverse Cable Curl'
@@ -202,6 +144,8 @@ fitocracy_id=62
 [[exercises]]
 fitocracy_name='Standing Biceps Cable Curl'
 fitocracy_id=63
+virtuagym_id=510
+virtuagym_name="Biceps Curl - Pulley"
 
 [[exercises]]
 fitocracy_name='Standing Dumbbell Reverse Curl'
@@ -210,18 +154,28 @@ fitocracy_id=64
 [[exercises]]
 fitocracy_name='Wide-Grip Standing Barbell Curl'
 fitocracy_id=69
+virtuagym_id=363
+virtuagym_name="Biceps curl standing - Barbell"
 
 [[exercises]]
 fitocracy_name='Seated Calf Raise'
 fitocracy_id=77
+virtuagym_id=9200
+virtuagym_name="Calf raise machine seated"
 
 [[exercises]]
 fitocracy_name='Standing Calf Raise'
 fitocracy_id=80
+virtuagym_id=266
+virtuagym_name="Standing calf raise"
 
 [[exercises]]
-fitocracy_name='Barbell Incline Bench Press'
-fitocracy_id=84
+fitocracy_name = "Barbell Incline Bench Press"
+fitocracy_id = 84
+mfp_name = "Incline Bench Press"
+mfp_id = 251
+virtuagym_id=362
+virtuagym_name="Bench press inclined - Barbell"
 
 [[exercises]]
 fitocracy_name='Bent-Arm Dumbbell Pullover'
@@ -230,22 +184,28 @@ fitocracy_id=86
 [[exercises]]
 fitocracy_name='Cable Crossover'
 fitocracy_id=87
-
-[[exercises]]
-fitocracy_name='Decline Barbell Bench Press'
-fitocracy_id=88
+virtuagym_id=503
+virtuagym_name="Crossover - Pulley"
 
 [[exercises]]
 fitocracy_name='Decline Dumbbell Bench Press'
 fitocracy_id=89
+virtuagym_id=70736
+virtuagym_name="Bench press decline - DBs"
 
 [[exercises]]
 fitocracy_name='Dumbbell Bench Press'
 fitocracy_id=92
+virtuagym_id=206
+virtuagym_name="Bench press - DBs"
 
 [[exercises]]
-fitocracy_name='Dumbbell Flyes'
-fitocracy_id=93
+fitocracy_name = "Dumbbell Flyes"
+fitocracy_id = 93
+mfp_name = "Flat Dumbbell Fly"
+mfp_id = 239
+virtuagym_id=204
+virtuagym_name="Butterfly - DBs"
 
 [[exercises]]
 fitocracy_name='Flat Bench Cable Flyes'
@@ -266,26 +226,38 @@ fitocracy_id=103
 [[exercises]]
 fitocracy_name='Push-Up'
 fitocracy_id=107
+virtuagym_id=198
+virtuagym_name="Push-up"
 
 [[exercises]]
 fitocracy_name='Smith Machine Bench Press'
 fitocracy_id=110
+virtuagym_id=415
+virtuagym_name="Bench press - Smith Machine"
 
 [[exercises]]
 fitocracy_name='Smith Machine Incline Bench Press'
 fitocracy_id=111
+virtuagym_id=416
+virtuagym_name="Bench press inclined -Smith Machine"
 
 [[exercises]]
 fitocracy_name='Seated Leg Curl'
 fitocracy_id=143
+virtuagym_id=242
+virtuagym_name="Seated leg curl"
 
 [[exercises]]
 fitocracy_name='Bent Over Barbell Row'
 fitocracy_id=153
+virtuagym_id=339
+virtuagym_name="Bent-over row standing - Barbell"
 
 [[exercises]]
 fitocracy_name='T-Bar Row'
 fitocracy_id=160
+virtuagym_id=495
+virtuagym_name="T-Bar Row - Barbell"
 
 [[exercises]]
 fitocracy_name='One-Arm Dumbbell Row'
@@ -294,14 +266,20 @@ fitocracy_id=164
 [[exercises]]
 fitocracy_name='Seated Cable Row'
 fitocracy_id=166
+virtuagym_id=506
+virtuagym_name="Row - Pulley machine"
 
 [[exercises]]
 fitocracy_name='Leg Extensions'
 fitocracy_id=176
+virtuagym_id=241
+virtuagym_name="Seated leg extension"
 
 [[exercises]]
 fitocracy_name='Leg Press'
 fitocracy_id=177
+virtuagym_id=243
+virtuagym_name="45 Degree leg press"
 
 [[exercises]]
 fitocracy_name='Standing Barbell Shoulder Press (OHP)'
@@ -318,30 +296,46 @@ fitocracy_id=195
 [[exercises]]
 fitocracy_name='Standing Dumbbell Shoulder Press'
 fitocracy_id=196
+virtuagym_id=282
+virtuagym_name="Shoulder press - DBs"
 
 [[exercises]]
 fitocracy_name='Front Dumbbell Raise'
 fitocracy_id=198
+virtuagym_id=220
+virtuagym_name="Front raise, alternated - DBs"
 
 [[exercises]]
 fitocracy_name='Machine Shoulder (Military) Press'
 fitocracy_id=207
+virtuagym_id=190
+virtuagym_name="Shoulder press machine"
 
 [[exercises]]
 fitocracy_name='Seated Barbell Shoulder Press'
 fitocracy_id=213
+virtuagym_id=315
+virtuagym_name="Shoulder press seated - Barbell"
 
 [[exercises]]
 fitocracy_name='Seated Dumbbell Shoulder Press'
 fitocracy_id=215
+virtuagym_id=413
+virtuagym_name="Shoulder press seated - DBs"
 
 [[exercises]]
 fitocracy_name='Upright Barbell Row'
 fitocracy_id=230
+virtuagym_id=369
+virtuagym_name="Upright row - Barbell"
 
 [[exercises]]
-fitocracy_name='Barbell Shrug'
-fitocracy_id=231
+fitocracy_name = "Barbell Shrug"
+fitocracy_id = 231
+mfp_name = "Shoulder Shrug"
+mfp_id = 285
+virtuagym_id=1962
+virtuagym_name="Shrugs standing - Barbell"
 
 [[exercises]]
 fitocracy_name='Calf-Machine Shoulder Shrug'
@@ -350,14 +344,20 @@ fitocracy_id=234
 [[exercises]]
 fitocracy_name='Dumbbell Shrug'
 fitocracy_id=235
+virtuagym_id=1963
+virtuagym_name="Shrugs standing - DBs"
 
 [[exercises]]
 fitocracy_name='Close-Grip Barbell Bench Press'
 fitocracy_id=246
+virtuagym_id=17915
+virtuagym_name="Bench press narrow - Barbell"
 
 [[exercises]]
 fitocracy_name='Dips - Triceps Version'
 fitocracy_id=251
+virtuagym_id=25386
+virtuagym_name="Dips - PB"
 
 [[exercises]]
 fitocracy_name='Dumbbell One-Arm Triceps Extension'
@@ -374,6 +374,8 @@ fitocracy_id=269
 [[exercises]]
 fitocracy_name='Standing Dumbbell Triceps Extension'
 fitocracy_id=272
+virtuagym_id=5915
+virtuagym_name="Triceps extension standing - DB"
 
 [[exercises]]
 fitocracy_name='Standing One-Arm Dumbbell Triceps Extension'
@@ -390,90 +392,139 @@ fitocracy_id=276
 [[exercises]]
 fitocracy_name='Triceps Pushdown'
 fitocracy_id=277
+virtuagym_id=20526
+virtuagym_name="Triceps pushdown - Pulley"
 
 [[exercises]]
 fitocracy_name='Triceps Pushdown - Rope Attachment'
 fitocracy_id=278
+virtuagym_id=20526
+virtuagym_name="Triceps pushdown - Pulley"
 
 [[exercises]]
 fitocracy_name='Chin-Up'
 fitocracy_id=283
+virtuagym_id=14874
+virtuagym_name="Pull up reverse grip - Rig"
 
 [[exercises]]
 fitocracy_name='Close-Grip Front Lat Pulldown'
 fitocracy_id=284
+virtuagym_id=20534
+virtuagym_name="Lat pulldown narrow grip"
 
 [[exercises]]
-fitocracy_name='Lat Pulldown'
-fitocracy_id=286
+fitocracy_name = "Lat Pulldown"
+fitocracy_id = 286
+mfp_name = "Lat Pulldown"
+mfp_id = 257
+virtuagym_id=184
+virtuagym_name="Lat pulldown wide grip front"
 
 [[exercises]]
 fitocracy_name='Pull-Up'
 fitocracy_id=288
+virtuagym_id=33026
+virtuagym_name="Pull up neutral grip hold - Rig"
 
 [[exercises]]
 fitocracy_name='Wide-Grip Lat Pulldown'
 fitocracy_id=295
+virtuagym_id=184
+virtuagym_name="Lat pulldown wide grip front"
 
 [[exercises]]
 fitocracy_name='Running (treadmill)'
 fitocracy_id=300
+virtuagym_id=514
+virtuagym_name="Treadmill, duration"
 
 [[exercises]]
 fitocracy_name='Incline Dumbbell Bench Press'
 fitocracy_id=303
+virtuagym_id=404
+virtuagym_name="Bench press inclined neutral - DBs"
 
 [[exercises]]
 fitocracy_name='Elliptical Trainer'
 fitocracy_id=304
+virtuagym_id=2
+virtuagym_name="Elliptical Trainer, duration"
 
 [[exercises]]
 fitocracy_name='Cycling (stationary)'
 fitocracy_id=305
+virtuagym_id=8
+virtuagym_name="Stationary Bike, duration"
 
 [[exercises]]
 fitocracy_name='Stair Machine'
 fitocracy_id=306
+virtuagym_id=6972
+virtuagym_name="Escalator, duration"
 
 [[exercises]]
 fitocracy_name='Lying Barbell Triceps Extension'
 fitocracy_id=314
+virtuagym_id=5890
+virtuagym_name="Triceps extension lying - Barbell"
 
 [[exercises]]
 fitocracy_name='Russian Twist'
 fitocracy_id=317
+virtuagym_id=257
+virtuagym_name="Russian twist"
 
 [[exercises]]
-fitocracy_name='Basketball'
-fitocracy_id=331
+fitocracy_name = "Basketball"
+fitocracy_id = 331
+mfp_name = "Basketball, nongame, general"
+mfp_id = 12
+mfp_type = "cardio"
+virtuagym_id=31
+virtuagym_name="Basketball - recreational"
 
 [[exercises]]
 fitocracy_name='Sit-Up'
 fitocracy_id=349
+virtuagym_id=285
+virtuagym_name="Sit-up"
 
 [[exercises]]
 fitocracy_name='Body Weight Squat'
 fitocracy_id=350
+virtuagym_id=162
+virtuagym_name="Air squat"
 
 [[exercises]]
 fitocracy_name='Ab Wheel (kneeling)'
 fitocracy_id=396
+virtuagym_id=93882
+virtuagym_name="Ab wheel rollout knees"
 
 [[exercises]]
 fitocracy_name='Weighted Hanging Leg Raise'
 fitocracy_id=398
+virtuagym_id=57238
+virtuagym_name="Hanging leg raise - Rig"
 
 [[exercises]]
 fitocracy_name='Bicycle'
 fitocracy_id=408
+virtuagym_id=39219
+virtuagym_name="Bicycle kick"
 
 [[exercises]]
 fitocracy_name='Romanian Deadlift'
 fitocracy_id=425
+virtuagym_id=2033
+virtuagym_name="Deadlift half range - Barbell"
 
 [[exercises]]
 fitocracy_name='Wide-Grip Pull-Up'
 fitocracy_id=437
+virtuagym_id=421
+virtuagym_name="Pull up wide grip - Rig"
 
 [[exercises]]
 fitocracy_name='Parallel-Grip Pull-Up'
@@ -482,30 +533,49 @@ fitocracy_id=438
 [[exercises]]
 fitocracy_name='Body Weight Ring Row'
 fitocracy_id=462
+virtuagym_id=461
+virtuagym_name="Row - ST"
 
 [[exercises]]
 fitocracy_name='Power Clean'
 fitocracy_id=472
+virtuagym_id=678
+virtuagym_name="Power clean - Barbell"
 
 [[exercises]]
 fitocracy_name='Barbell Split Squat'
 fitocracy_id=476
+virtuagym_id=5488
+virtuagym_name="Split squat, right - Barbell"
 
 [[exercises]]
 fitocracy_name='Dumbbell Side Lateral Raise'
 fitocracy_id=490
+virtuagym_id=35
+virtuagym_name="Lateral raise standing - DBs"
 
 [[exercises]]
-fitocracy_name='Seated Barbell Military Press'
-fitocracy_id=491
+fitocracy_name = "Seated Barbell Military Press"
+fitocracy_id = 491
+mfp_name = "Barbell Military Press"
+mfp_id = 217
+virtuagym_id=315
+virtuagym_name="Shoulder press seated - Barbell"
 
 [[exercises]]
-fitocracy_name='Bikram / Hot Yoga'
-fitocracy_id=506
+fitocracy_name = "Bikram / Hot Yoga"
+fitocracy_id = 506
+mfp_name = "Yoga"
+mfp_id = 421029
+mfp_type = "cardio"
+virtuagym_id=516
+virtuagym_name="Bikram Yoga"
 
 [[exercises]]
 fitocracy_name='Running'
 fitocracy_id=518
+virtuagym_id=511
+virtuagym_name="Running, duration"
 
 [[exercises]]
 fitocracy_name='Machine Chest Fly (Pec Deck)'
@@ -514,22 +584,32 @@ fitocracy_id=522
 [[exercises]]
 fitocracy_name='Bent-Over Rear Delt Raise'
 fitocracy_id=523
+virtuagym_id=20540
+virtuagym_name="Bent-over reverse fly - DBs"
 
 [[exercises]]
 fitocracy_name='Walking'
 fitocracy_id=525
+virtuagym_id=161
+virtuagym_name="Walking, duration"
 
 [[exercises]]
 fitocracy_name='Hiking'
 fitocracy_id=529
+virtuagym_id=155
+virtuagym_name="Hiking"
 
 [[exercises]]
 fitocracy_name='Walking (treadmill)'
 fitocracy_id=530
+virtuagym_id=161
+virtuagym_name="Walking, duration"
 
 [[exercises]]
 fitocracy_name='Pendlay Row'
 fitocracy_id=532
+virtuagym_id=339
+virtuagym_name="Bent-over row standing - Barbell"
 
 [[exercises]]
 fitocracy_name='Scissors with Hold (Beach Scissors)'
@@ -538,14 +618,20 @@ fitocracy_id=549
 [[exercises]]
 fitocracy_name='Wide Leg Sit-Up'
 fitocracy_id=554
+virtuagym_id=285
+virtuagym_name="Sit-up"
 
 [[exercises]]
 fitocracy_name='Vertical Leg Crunch'
 fitocracy_id=556
+virtuagym_id=1993
+virtuagym_name="Crunch balanced straight legs"
 
 [[exercises]]
 fitocracy_name='Leg Climb Crunch'
 fitocracy_id=557
+virtuagym_id=258
+virtuagym_name="Crunch toe touch"
 
 [[exercises]]
 fitocracy_name='Pulse Up - Legs Straight'
@@ -554,6 +640,8 @@ fitocracy_id=558
 [[exercises]]
 fitocracy_name='Other Cardio'
 fitocracy_id=587
+virtuagym_id=5104
+virtuagym_name="Cardio free"
 
 [[exercises]]
 fitocracy_name='Flat Frog Raise'
@@ -570,6 +658,8 @@ fitocracy_id=686
 [[exercises]]
 fitocracy_name='General Yoga'
 fitocracy_id=689
+virtuagym_id=71
+virtuagym_name="Yoga"
 
 [[exercises]]
 fitocracy_name='V-Squat Machine'
@@ -582,6 +672,8 @@ fitocracy_id=717
 [[exercises]]
 fitocracy_name='Machine Incline Bench Press'
 fitocracy_id=718
+virtuagym_id=13155
+virtuagym_name="Chest press incline"
 
 [[exercises]]
 fitocracy_name='Hang Clean'
@@ -594,6 +686,8 @@ fitocracy_id=746
 [[exercises]]
 fitocracy_name='Dip Station Straight Leg Raise'
 fitocracy_id=748
+virtuagym_id=25385
+virtuagym_name="Leg raise - PB"
 
 [[exercises]]
 fitocracy_name='Weighted Reverse Crunch'
@@ -606,47 +700,73 @@ fitocracy_id=867
 [[exercises]]
 fitocracy_name='Machine Hack Squat'
 fitocracy_id=868
+virtuagym_id=9185
+virtuagym_name="Hack squat machine"
 
 [[exercises]]
 fitocracy_name='Machine Bicep Curls'
 fitocracy_id=933
+virtuagym_id=25041
+virtuagym_name="Bicep curl machine"
 
 [[exercises]]
 fitocracy_name='Machine Calf Extension'
 fitocracy_id=934
+virtuagym_id=238
+virtuagym_name="Calf machine"
 
 [[exercises]]
-fitocracy_name='Machine Back Extension'
-fitocracy_id=935
+fitocracy_name = "Machine Back Extension"
+fitocracy_id = 935
+mfp_name = "Back Extension"
+mfp_id = 215
+virtuagym_id=234
+virtuagym_name="Back extension machine"
 
 [[exercises]]
 fitocracy_name='Kettlebell Deadlift'
 fitocracy_id=960
+virtuagym_id=663
+virtuagym_name="Deadlift - KB"
 
 [[exercises]]
 fitocracy_name='Stability Ball Push-Up'
 fitocracy_id=961
+virtuagym_id=9736
+virtuagym_name="Push-up feet on - FB"
 
 [[exercises]]
 fitocracy_name='Rack Squat'
 fitocracy_id=973
+virtuagym_id=244
+virtuagym_name="Squat - Smith Machine"
 
 [[exercises]]
 fitocracy_name='Machine Seated Row'
 fitocracy_id=984
+virtuagym_id=183
+virtuagym_name="Horizontal row machine"
 
 [[exercises]]
 fitocracy_name='Machine Chest Press'
 fitocracy_id=1007
+virtuagym_id=185
+virtuagym_name="Seated chest press"
 
 [[exercises]]
 fitocracy_name='Weighted Russian Twist'
 fitocracy_id=1015
+virtuagym_id=1997
+virtuagym_name="Russian twist - DB"
 
 [[exercises]]
 fitocracy_name='Rotary Torso Machine'
 fitocracy_id=1088
+virtuagym_id=17697
+virtuagym_name="Rotary torso machine, right"
 
 [[exercises]]
 fitocracy_name='Band Chest Press'
 fitocracy_id=1181
+virtuagym_id=6278
+virtuagym_name="Chest press - EB"
