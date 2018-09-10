@@ -7,8 +7,8 @@ import (
 	_ "github.com/mattn/go-sqlite3"
 	"log"
 	"os"
-	"strconv"
 	"github.com/BurntSushi/toml"
+	"github.com/spf13/viper"
 )
 
 type Config struct {
@@ -16,9 +16,21 @@ type Config struct {
 }
 
 func main() {
+	//load up our application config
+	viper.SetConfigName("config")
+	viper.AddConfigPath(".")
+	err := viper.ReadInConfig() // Find and read the config file
+	if err != nil { // Handle errors reading the config file
+		log.Fatalf("Fatal error config file: %s \n", err)
+	}
+
 	//load up our mapping file
 	var config Config
-	_, err := toml.DecodeFile("exercise_mappings.toml", &config)
+	_, err = toml.DecodeFile(viper.GetString("exercise_mappings"), &config)
+	if err != nil {
+		log.Fatalf("Fatal error reading mapping file %s: %s \n", viper.GetString("exercise_mappings"), err)
+	}
+
 	exerciseMapper := NewExerciseMapper(config.Exercises)
 
 	db, err := getDB()
@@ -27,24 +39,27 @@ func main() {
 	}
 	username := flag.String("user", "", "Fitocracy Username")
 	password := flag.String("pass", "", "Fitocracy Password")
-	file := flag.String("file", "fitocracy.csv", "Path to exported csv")
 	flag.Parse()
 
-	if "" == *username || "" == *password {
+	if "" == *username {
 		flag.PrintDefaults()
 		log.Fatal("Required arguments not provided")
 	}
 
-	//TODO: split these into different operations that can be triggered with different flags
+	if "" == *password {
+		log.Println("No password provided. Won't communicate with Fitocracy and will just dump CSVs based on local db")
+	}
 
 	//Fill the sqlite db with data from the API
-	//PopulateDB(db, *username, *password)
+	if "" != *password {
+		PopulateDB(db, *username, *password)
+	}
 
-	err = DumpCSV(db, *username, *file, exerciseMapper, FitocracyCSVDumper{})
+	err = DumpCSV(db, *username, viper.GetString("fitocracy_csv"), exerciseMapper, FitocracyCSVDumper{})
 	if err != nil {
 		log.Fatal("error generating csv: ", err)
 	}
-	err = DumpCSV(db, *username, "virtuagym.csv", exerciseMapper, VirtuaGymCSVDumper{})
+	err = DumpCSV(db, *username, viper.GetString("virtuagym_csv"), exerciseMapper, VirtuaGymCSVDumper{})
 	if err != nil {
 		log.Fatal("error generating csv: ", err)
 	}
@@ -53,8 +68,6 @@ func main() {
 type CSVDumper interface {
 	Dump(*csv.Writer, UserActivityDetail, *ExerciseMapper)
 }
-
-type FitocracyCSVDumper struct{}
 
 // Dump the contents of an already populated db into a csv
 func DumpCSV(db *sqlx.DB, username string, filename string, exerciseMapper *ExerciseMapper, dumper CSVDumper) (err error) {
@@ -91,10 +104,4 @@ func DumpCSV(db *sqlx.DB, username string, filename string, exerciseMapper *Exer
 	log.Printf("Wrote csv output to %s\n", filename)
 
 	return
-}
-
-func (c FitocracyCSVDumper) Dump(csvWriter *csv.Writer, userActivityDetail UserActivityDetail, exerciseMapper *ExerciseMapper) {
-	if err := csvWriter.Write([]string{userActivityDetail.PerformedAt.String(), strconv.Itoa(userActivityDetail.Activity.Id), userActivityDetail.Name, strconv.FormatFloat(userActivityDetail.Weight, 'f', -1, 32), strconv.FormatFloat(userActivityDetail.Reps, 'f', -1, 32)}); err != nil {
-		log.Fatalln("error writing record to csv:", err)
-	}
 }

@@ -1,4 +1,4 @@
-package main
+package fitocracy
 
 import (
 	"encoding/json"
@@ -10,7 +10,7 @@ import (
 
 func TestParseActivityHistory(t *testing.T) {
 	var activityHistories []ApiActivityHistory
-	dat, err := ioutil.ReadFile("test_assets/sample_activity_history.json")
+	dat, err := ioutil.ReadFile("../test_assets/sample_activity_history.json")
 	if nil != err {
 		t.Fatal(err)
 	}

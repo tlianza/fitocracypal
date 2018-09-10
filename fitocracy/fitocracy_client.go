@@ -1,4 +1,4 @@
-package main
+package fitocracy
 
 import (
 	"encoding/json"
@@ -52,7 +52,6 @@ type ApiActionActivity struct {
 
 type ApiActivityHistory struct {
 	Id                 int         `json:"id"`
-	GroupId            int         `json:"action_group_id"`
 	Points             int         `json:"points"`
 	Name               string      `json:"name"`
 	TimeString         string      `json:"time"`
@@ -86,18 +85,17 @@ func activity_history_url(activity_id int) string {
 This function gets you a logged in, ready-to use http client in addition to returning the
 user's fitocracy id (useful for future calls)
 */
-func getClient(username string, password string) (err error, userId int, httpClient http.Client) {
-	//Remove this when you're not testing through a proxy
-	//http.DefaultTransport.(*http.Transport).TLSClientConfig = &tls.Config{InsecureSkipVerify: true}
-
+func GetClient(username string, password string) (err error, userId int, httpClient http.Client) {
 	bow := surf.NewBrowser()
 	err = bow.Open(fitocracy_url)
 	if err != nil {
+		log.Fatal(err)
 		return
 	}
 
 	fm, err := bow.Form("form#login-modal-form ")
 	if err != nil {
+		log.Fatal(err)
 		return
 	}
 
@@ -123,7 +121,7 @@ func getClient(username string, password string) (err error, userId int, httpCli
 	return
 }
 
-func getActivities(client http.Client, fitocracyUserId int) (err error, activities []ApiActivity) {
+func GetActivities(client http.Client, fitocracyUserId int) (err error, activities []ApiActivity) {
 	log.Printf("Getting activities for user: %d\n", fitocracyUserId)
 	resp, err := client.Get(activities_url(fitocracyUserId))
 	if err != nil {
@@ -137,7 +135,7 @@ func getActivities(client http.Client, fitocracyUserId int) (err error, activiti
 	return
 }
 
-func getActivityHistory(client http.Client, fitocracyActivityId int) (err error, activityHistories []ApiActivityHistory) {
+func GetActivityHistory(client http.Client, fitocracyActivityId int) (err error, activityHistories []ApiActivityHistory) {
 	if 0 == fitocracyActivityId {
 		return fmt.Errorf("Invalid Activity Id passed."), activityHistories
 	}

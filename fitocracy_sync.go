@@ -4,13 +4,25 @@ import (
 	"log"
 	"net/http"
 	"github.com/jmoiron/sqlx"
+	"github.com/tlianza/fitocracypal/fitocracy"
+	"encoding/csv"
+	"strconv"
 )
+
+type FitocracyCSVDumper struct{}
+
+func (c FitocracyCSVDumper) Dump(csvWriter *csv.Writer, userActivityDetail UserActivityDetail, exerciseMapper *ExerciseMapper) {
+	if err := csvWriter.Write([]string{userActivityDetail.PerformedAt.String(), strconv.Itoa(userActivityDetail.Activity.Id), userActivityDetail.Name, strconv.FormatFloat(userActivityDetail.Weight, 'f', -1, 32), strconv.FormatFloat(userActivityDetail.Reps, 'f', -1, 32)}); err != nil {
+		log.Fatalln("error writing record to csv:", err)
+	}
+}
+
 
 // Does all the heavy lifting of populating the local db with everything from Fitocracy
 func PopulateDB(db *sqlx.DB, username string, password string){
 	ensureSchema(db)
 
-	err, fitocracyUserId, client := getClient(username, password)
+	err, fitocracyUserId, client := fitocracy.GetClient(username, password)
 	if nil != err {
 		log.Fatal(err)
 	}
@@ -26,7 +38,7 @@ func PopulateDB(db *sqlx.DB, username string, password string){
 		}
 	}
 
-	err, activities := getActivities(client, fitocracyUserId)
+	err, activities := fitocracy.GetActivities(client, fitocracyUserId)
 	if nil != err {
 		log.Fatal(err)
 	}
@@ -39,7 +51,7 @@ func PopulateDB(db *sqlx.DB, username string, password string){
 }
 
 // Given activities from the API, insert them in the database
-func SyncActivities(db *sqlx.DB, user User, activities []ApiActivity) (err error) {
+func SyncActivities(db *sqlx.DB, user User, activities []fitocracy.ApiActivity) (err error) {
 	for _, apiActivity := range activities {
 		_, err := db.Exec("INSERT INTO activities(id, name) VALUES($1, $2) ON CONFLICT(id) DO UPDATE SET name=excluded.name", apiActivity.Id, apiActivity.Name)
 		if nil != err {
@@ -72,7 +84,7 @@ func SyncUserActivities(db *sqlx.DB, client http.Client, user User) (err error) 
 	}
 
 	//create a channel that can buffer everything if needed
-	c := make(chan []ApiActivityHistory, len(allUserActivityCounts))
+	c := make(chan []fitocracy.ApiActivityHistory, len(allUserActivityCounts))
 
 	go InsertActivityHistory(db, user, c)
 	FetchUserActivities(client, allUserActivityCounts, c)
@@ -83,10 +95,10 @@ func SyncUserActivities(db *sqlx.DB, client http.Client, user User) (err error) 
 }
 
 // Get detailed user activities from the API and send them to a channel
-func FetchUserActivities(client http.Client, allUserActivityCounts []UserActivityCount, ch chan<- []ApiActivityHistory) {
+func FetchUserActivities(client http.Client, allUserActivityCounts []UserActivityCount, ch chan<- []fitocracy.ApiActivityHistory) {
 	for _, userActivityCount := range allUserActivityCounts {
 		log.Printf("Fetching activity history for activity %d\n", userActivityCount.ActivityId)
-		err, apiActivityHistoryArray := getActivityHistory(client, userActivityCount.ActivityId)
+		err, apiActivityHistoryArray := fitocracy.GetActivityHistory(client, userActivityCount.ActivityId)
 		if err != nil {
 			log.Fatal(err)
 		}
@@ -97,11 +109,11 @@ func FetchUserActivities(client http.Client, allUserActivityCounts []UserActivit
 }
 
 // Given a channel of detailed user activities, insert them into the db
-func InsertActivityHistory(db *sqlx.DB, user User, ch <-chan []ApiActivityHistory) {
+func InsertActivityHistory(db *sqlx.DB, user User, ch <-chan []fitocracy.ApiActivityHistory) {
 	for {
 		apiActivityHistoryArray := <-ch
 		for _, activityHistory := range apiActivityHistoryArray {
-			log.Printf("Looping over sets for %s\n", activityHistory.Name)
+			log.Printf("Looping over sets for [%d] %s\n", activityHistory.Id, activityHistory.Name)
 			for _, apiActivityAction := range activityHistory.Actions {
 				performedAt, err := apiActivityAction.PerformedAt()
 				if nil != err {
@@ -109,7 +121,7 @@ func InsertActivityHistory(db *sqlx.DB, user User, ch <-chan []ApiActivityHistor
 				}
 				log.Printf("Inserting user activity [%d] %s: %d on %s\n", apiActivityAction.Activity.Id, apiActivityAction.Activity.Name, apiActivityAction.Id, performedAt)
 				_, err = db.Exec("INSERT OR IGNORE INTO user_activities(id, user_id, fitocracy_group_id, activity_id, units, reps, weight, performed_at) VALUES($1, $2, $3, $4, $5, $6, $7, $8)",
-					apiActivityAction.Id, user.Id, activityHistory.GroupId, apiActivityAction.Activity.Id, apiActivityAction.Units(), apiActivityAction.Effort1, apiActivityAction.Effort0, performedAt)
+					apiActivityAction.Id, user.Id, activityHistory.Id, apiActivityAction.Activity.Id, apiActivityAction.Units(), apiActivityAction.Effort1, apiActivityAction.Effort0, performedAt)
 				if nil != err {
 					log.Fatal(err)
 				}
