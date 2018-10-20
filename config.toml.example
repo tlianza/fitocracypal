@@ -1,0 +1,5 @@
+exercise_mappings="exercise_mappings.toml"
+fitocracy_csv="fitocracy.csv"
+virtuagym_csv="virtuagym.csv"
+virtuagym_api_key="YOUR_KEY_HERE"
+virtuagym_user="YOUR_EMAIL_HERE"
