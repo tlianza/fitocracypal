@@ -38,6 +38,18 @@ type UserActivity struct {
 	CreatedAt        time.Time `db:"created_at"`
 }
 
+// Log API events we perform that actually mutate state, so
+// we have some facility for tracking/undoing them
+type ApiActivityLog struct {
+	Id        int       `db:"id"`
+	Operation string    `db:"operation"`
+	ResultId  string    `db:"result_id"`
+	Status    int       `db:"status"`
+	Note      string    `db:"note"`
+	CreatedAt time.Time `db:"created_at"`
+}
+
+// Used for generating CSVs when you need to join these two tables together
 type UserActivityDetail struct {
 	*UserActivity
 	*Activity
@@ -75,6 +87,15 @@ CREATE TABLE IF NOT EXISTS user_activities (
 	weight       	       DECIMAL(6, 1),
 	performed_at  	       TIMESTAMP NOT NULL,
 	created_at             TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS api_activity_log (
+    id                 INTEGER PRIMARY KEY,
+    operation          TEXT NOT NULL,	
+    status             INTEGER,
+    result_id 		   TEXT NULL,
+	note 			   TEXT NULL,
+	created_at         TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );`
 
 func getDB() (db *sqlx.DB, err error) {
