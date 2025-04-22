@@ -36,6 +36,11 @@ func PopulateDB(db *sqlx.DB, username string, password string){
 		if nil != err {
 			log.Fatal(err)
 		}
+		// Fetch the newly created user to get their ID
+		err, user = GetUserByFitocracyId(db, fitocracyUserId)
+		if nil != err {
+			log.Fatal(err)
+		}
 	}
 
 	err, activities := fitocracy.GetActivities(client, fitocracyUserId)

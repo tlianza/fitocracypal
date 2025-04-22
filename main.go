@@ -3,11 +3,12 @@ package main
 import (
 	"encoding/csv"
 	"flag"
-	"github.com/jmoiron/sqlx"
-	_ "github.com/mattn/go-sqlite3"
 	"log"
 	"os"
+
 	"github.com/BurntSushi/toml"
+	"github.com/jmoiron/sqlx"
+	_ "github.com/mattn/go-sqlite3"
 	"github.com/spf13/viper"
 )
 
@@ -20,7 +21,7 @@ func main() {
 	viper.SetConfigName("config")
 	viper.AddConfigPath(".")
 	err := viper.ReadInConfig() // Find and read the config file
-	if err != nil { // Handle errors reading the config file
+	if err != nil {             // Handle errors reading the config file
 		log.Fatalf("Fatal error config file: %s \n", err)
 	}
 
@@ -77,7 +78,7 @@ func DumpCSV(db *sqlx.DB, username string, filename string, exerciseMapper *Exer
 		log.Fatal(err)
 	}
 
-	file, err := os.OpenFile(filename, os.O_CREATE|os.O_WRONLY, 0777)
+	file, err := os.OpenFile(filename, os.O_CREATE|os.O_WRONLY|os.O_TRUNC, 0777)
 	defer file.Close()
 	if err != nil {
 		os.Exit(1)
